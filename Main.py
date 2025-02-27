@@ -3,7 +3,7 @@ import os
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-ASCIIGradient = [" ", ".", "'", "`", "^", "\"", ",", ":", ";", "!", "i", "l", "I", "?", "/", "|", "(", ")", "1", "t", "f", "L", "T", "F", "E", "X", "H", "#", "@", "8", "&", "%", "$"]
+ASCIIGradient = [" ",".",":",";","+","x","X","$","@"]
 video_path = "res/one_last_breath.mp4"
 output_video_path = "res/one_last_breath_ascii.mp4"
 frame_rate = 6
@@ -45,6 +45,8 @@ for frame in frames:
             frame[i][j][2] = value
     '''
 
+output_path = "res/frame_15_test.jpg"
+cv2.imwrite(output_path, frames[15])
 
 print("Generating ASCII text...")
 ascii_frames = []

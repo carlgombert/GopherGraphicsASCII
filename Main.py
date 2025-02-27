@@ -8,8 +8,6 @@ video_path = "res/one_last_breath.mp4"
 output_video_path = "res/one_last_breath_ascii.mp4"
 frame_rate = 6
 
-#128 / 72
-
 # load video from file
 video_capture = cv2.VideoCapture(video_path)
 fps = video_capture.get(cv2.CAP_PROP_FPS)
@@ -19,6 +17,8 @@ extract_interval = int(fps / frame_rate)
 frames = []
 
 # extract each frame from the video and save in list
+print("Extracting frames...")
+
 frame_number = 0
 while True:
     success, frame = video_capture.read()
@@ -32,17 +32,23 @@ while True:
 video_capture.release()
 
 #grayscale each frame
+print("Grayscaling images...")
+
 for frame in frames:
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    '''
     for i in range(len(frame)):
         for j in range(len(frame[0])):
             value = int((int(frame[i][j][0]) + int(frame[i][j][1]) + int(frame[i][j][2])) * 0.33)
             frame[i][j][0] = value
             frame[i][j][1] = value
             frame[i][j][2] = value
+    '''
 
+
+print("Generating ASCII text...")
 ascii_frames = []
 ppc = 8 # pixels per character
-
 for frame in frames:
     frame_text = []
     for i in range(0, len(frame), ppc):
@@ -61,6 +67,7 @@ for frame in frames:
 
 font = ImageFont.truetype("res/CascadiaMono.otf", 11)
 
+print("Generating images from text...")
 generated_frames = []
 for frame in ascii_frames:
     img = Image.new("RGB", (970, 680), "black")
@@ -74,6 +81,7 @@ for frame in ascii_frames:
 
 video = cv2.VideoWriter(output_video_path, cv2.VideoWriter_fourcc(*"mp4v"), frame_rate, (970, 680))
 
+print("Writing video")
 for frame in generated_frames:
     video.write(frame)
 

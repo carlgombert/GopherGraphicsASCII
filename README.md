@@ -3,12 +3,14 @@
 <img src="https://github.com/carlgombert/GopherGraphicsASCII/blob/main/res/demo.gif"/>
 </p>
 
+## [Video Link](https://drive.google.com/file/d/127z1eB-aLx5_5_c9sOFPqbFuybVReoYL/view?usp=sharing)<br />
+
 [Python Script](https://github.com/carlgombert/GopherGraphicsASCII/blob/main/Main.py)<br />
-[Video Link]()<br />
+
 This is my submission to the ASCII graphics demo
 
 For my demo I converted the "one last breath" music video by Creed to ASCII graphics<br />
-I wrote the program for this in python, OpenCV has a a lot of great functions for 
+I wrote the program for this in python, OpenCV has a lot of great functions for 
 dealing with images and videos.
 
 I parsed the original video frame by frame<br />

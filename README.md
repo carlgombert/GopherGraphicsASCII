@@ -3,6 +3,7 @@ https://github.com/carlgombert/GopherGraphicsASCII/blob/main/res/demo.gif
 <p align="left">
 <img src="https://github.com/carlgombert/GopherGraphicsASCII/blob/main/res/demo.gif"/>
 </p>
+
 [Python Script](https://github.com/carlgombert/GopherGraphicsASCII/blob/main/Main.py)<br />
 [Video Link]()<br />
 This is my submission to the ASCII graphics demo

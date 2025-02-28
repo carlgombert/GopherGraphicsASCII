@@ -1,4 +1,4 @@
-### Text Graphics Competition - Gopher Graphics Club
+# Text Graphics Competition - Gopher Graphics Club
 <p align="left">
 <img src="https://github.com/carlgombert/GopherGraphicsASCII/blob/main/res/demo.gif"/>
 </p>
